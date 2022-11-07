@@ -1,0 +1,33 @@
+
+a
+java:S2095-"DUse try-with-resources or close this "Socket" in a "finally" clause.(Ü»ü¬8§þ‚•Å0
+f
+java:S2095$"DUse try-with-resources or close this "Socket" in a "finally" clause.(ÉÙüùÿÿÿÿÿ8¤þ‚•Å0
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¤Ñ„…ûÿÿÿÿ8©þ‚•Å0
+V
+java:S1854Q":Remove this useless assignment to local variable "status".(ï‹ú+8˜¡ˆ•Å0
+^
+java:S1854m"<Remove this useless assignment to local variable "response".(ØýÆÜþÿÿÿÿ8´˜•Å0
+b
+java:S4426"@Use a key length of at least 2048 bits for RSA cipher algorithm.(Úðö³øÿÿÿÿ8²þ‚•Å0
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(‰ð“„ùÿÿÿÿ8»þ‚•Å0
+G
+java:S1481Q"+Remove this unused "status" local variable.(ï‹ú+8§¡ˆ•Å0
+p
+java:S4719U"NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(úŠ¸Œüÿÿÿÿ8ë˜•Å0
+U	java:S106W"9Replace this use of System.out or System.err by a logger.(¦åˆÕ8ª¡ˆ•Å0
+p
+java:S4719\"NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(ÞÜ·Øþÿÿÿÿ8î˜•Å0
+p
+java:S4719`"NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(ë¨Í‡úÿÿÿÿ8ï˜•Å0
+U	java:S106e"9Replace this use of System.out or System.err by a logger.(¸ÉÖÑ8«¡ˆ•Å0
+O
+java:S1481m"-Remove this unused "response" local variable.(ØýÆÜþÿÿÿÿ8ò˜•Å0
+p
+java:S4719q"NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(Ä…Åúÿÿÿÿ8ò˜•Å0
+k
+java:S4719u"NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(Öô…®8ó˜•Å0
+U	java:S106z"9Replace this use of System.out or System.err by a logger.(ŸÓ–ü8®¡ˆ•Å0
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ê±¢ðùÿÿÿÿ8°¡ˆ•Å0
+<
+java:S2119‰"Save and re-use this "Random".(½“Áœ8´¡ˆ•Å0

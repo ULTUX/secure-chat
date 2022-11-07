@@ -1,0 +1,19 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(¢ž†ö
+J
+java:S3740@"/Provide the parametrized type for this generic.(¡Ô‚‰ùÿÿÿÿ
+z
+java:S1450"_Remove the "addPeorpleButton" field and declare it as a local variable in the relevant methods.(›¼·»ÿÿÿÿÿ
+j
+java:S1450"TRemove the "list1" field and declare it as a local variable in the relevant methods.(¢ž†ö
+n
+java:S1450"XRemove the "textArea1" field and declare it as a local variable in the relevant methods.(è½¶×
+o
+java:S1450"YRemove the "textField1" field and declare it as a local variable in the relevant methods.(×ŒàÌ
+V	java:S125""<This block of commented-out lines of code should be removed.(ýúèïþÿÿÿÿ
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(øŒ¼Æ8›ÚŠ”Å0
+t
+java:S1171-"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+h	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–­Œßúÿÿÿÿ
+h	java:S100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ ¨úúÿÿÿÿ
