@@ -1,4 +1,4 @@
-package org.example.model;
+package pl.edu.pwr.bsiui.model;
 
 import lombok.Getter;
 import lombok.Setter;

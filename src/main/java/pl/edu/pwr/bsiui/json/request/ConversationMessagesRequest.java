@@ -1,10 +1,10 @@
-package org.example.json.request;
+package pl.edu.pwr.bsiui.json.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.Requests;
+import pl.edu.pwr.bsiui.Requests;
 
 @AllArgsConstructor
 @NoArgsConstructor

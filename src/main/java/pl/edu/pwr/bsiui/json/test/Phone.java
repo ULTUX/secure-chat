@@ -1,4 +1,4 @@
-package org.example.json.test;
+package pl.edu.pwr.bsiui.json.test;
 
 import lombok.Data;
 

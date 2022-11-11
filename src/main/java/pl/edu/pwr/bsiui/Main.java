@@ -1,9 +1,9 @@
-package org.example;
+package pl.edu.pwr.bsiui;
 
 import lombok.SneakyThrows;
-import org.example.json.request.LoginRequest;
-import org.example.json.request.RegisterRequest;
-import org.example.json.response.Response;
+import pl.edu.pwr.bsiui.json.request.LoginRequest;
+import pl.edu.pwr.bsiui.json.request.RegisterRequest;
+import pl.edu.pwr.bsiui.json.response.Response;
 
 public class Main {
     @SneakyThrows

@@ -1,4 +1,4 @@
-package org.example.json.response;
+package pl.edu.pwr.bsiui.json.response;
 
 import lombok.Getter;
 import lombok.Setter;

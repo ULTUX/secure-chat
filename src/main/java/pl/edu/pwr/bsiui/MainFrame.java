@@ -1,4 +1,4 @@
-package org.example;
+package pl.edu.pwr.bsiui;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
 import com.google.common.collect.Lists;
@@ -6,12 +6,12 @@ import com.google.common.collect.Sets;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import lombok.SneakyThrows;
-import org.example.json.request.*;
-import org.example.json.response.ConversationsResponse;
-import org.example.json.response.GetMessages;
-import org.example.json.response.Response;
-import org.example.model.Conversation;
-import org.example.model.User;
+import pl.edu.pwr.bsiui.json.request.*;
+import pl.edu.pwr.bsiui.json.response.ConversationsResponse;
+import pl.edu.pwr.bsiui.json.response.GetMessages;
+import pl.edu.pwr.bsiui.json.response.Response;
+import pl.edu.pwr.bsiui.model.Conversation;
+import pl.edu.pwr.bsiui.model.User;
 
 import javax.swing.*;
 import java.awt.*;

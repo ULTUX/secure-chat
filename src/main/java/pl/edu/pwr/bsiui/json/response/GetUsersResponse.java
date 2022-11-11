@@ -1,9 +1,9 @@
-package org.example.json.response;
+package pl.edu.pwr.bsiui.json.response;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.example.model.User;
+import pl.edu.pwr.bsiui.model.User;
 
 import java.util.List;
 

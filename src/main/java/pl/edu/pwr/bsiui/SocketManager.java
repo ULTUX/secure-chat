@@ -1,12 +1,12 @@
-package org.example;
+package pl.edu.pwr.bsiui;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.Hashing;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.example.json.request.Request;
-import org.example.json.response.Response;
+import pl.edu.pwr.bsiui.json.request.Request;
+import pl.edu.pwr.bsiui.json.response.Response;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

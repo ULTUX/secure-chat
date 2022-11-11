@@ -1,4 +1,4 @@
-package org.example;
+package pl.edu.pwr.bsiui;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;

@@ -1,4 +1,4 @@
-package org.example;
+package pl.edu.pwr.bsiui;
 
 public enum Requests {
     REGISTER("register"),
