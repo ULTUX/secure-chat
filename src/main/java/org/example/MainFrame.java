@@ -11,6 +11,7 @@ import org.example.json.response.ConversationsResponse;
 import org.example.json.response.GetMessages;
 import org.example.json.response.Response;
 import org.example.model.Conversation;
+import org.example.model.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,12 +33,14 @@ public class MainFrame extends JFrame implements ActionListener {
     private JButton newConversationButton;
     private JTextField textField1;
     private SocketManager socketManager;
+    private String email;
 
     private Map<String, String> messagesMap = new HashMap<>();
     private int selectedI = 0;
 
     public MainFrame(String email, String password) throws Exception {
         super("~DR. Stalowy");
+        this.email = email;
         this.socketManager = new SocketManager();
         boolean connected = false;
         while (!connected) {
@@ -87,7 +90,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
         var conversations = socketManager.sendRequest(request, ConversationsResponse.class);
         var newMap = (conversations.getBody().conversations()
-                .stream().collect(Collectors.toMap(Conversation::getName, s -> "")));
+                .stream().filter(c -> c.getNames().stream().map(User::getLogin).toList().contains(email)).collect(Collectors.toMap(Conversation::getName, s -> "")));
         var diff = Sets.difference(newMap.keySet(), messagesMap.keySet());
         if (!diff.isEmpty() || messagesMap.keySet().isEmpty()) {
             messagesMap.putAll(newMap);
@@ -155,9 +158,9 @@ public class MainFrame extends JFrame implements ActionListener {
     @SneakyThrows
     public static void main(String[] args) {
         FlatDarculaLaf.setup();
-//        String email = JOptionPane.showInputDialog(null, "Podaj email", "Logowanie", JOptionPane.QUESTION_MESSAGE);
-//        String password = JOptionPane.showInputDialog(null, "Podaj haslo", "Logowanie", JOptionPane.QUESTION_MESSAGE);
-        new MainFrame("a", "a");
+        String email = JOptionPane.showInputDialog(null, "Podaj email", "Logowanie", JOptionPane.QUESTION_MESSAGE);
+        String password = JOptionPane.showInputDialog(null, "Podaj haslo", "Logowanie", JOptionPane.QUESTION_MESSAGE);
+        new MainFrame(email, password);
     }
 
     @SneakyThrows
@@ -173,6 +176,7 @@ public class MainFrame extends JFrame implements ActionListener {
             var conversationResp = socketManager.sendRequest(request, Response.class);
             if (conversationResp.getStatus() == 200) {
                 messagesMap.put(name, "");
+                refreshList();
             } else
                 printErrorMessage("Could not create conversation: " + conversationResp.getResponse());
 
