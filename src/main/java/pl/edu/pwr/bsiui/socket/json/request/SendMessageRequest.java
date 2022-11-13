@@ -1,7 +1,7 @@
-package pl.edu.pwr.bsiui.json.request;
+package pl.edu.pwr.bsiui.socket.json.request;
 
 import lombok.*;
-import pl.edu.pwr.bsiui.Requests;
+import pl.edu.pwr.bsiui.socket.Requests;
 
 @AllArgsConstructor
 @NoArgsConstructor

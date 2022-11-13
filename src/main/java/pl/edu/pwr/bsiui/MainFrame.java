@@ -6,12 +6,14 @@ import com.google.common.collect.Sets;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import lombok.SneakyThrows;
-import pl.edu.pwr.bsiui.json.request.*;
-import pl.edu.pwr.bsiui.json.response.ConversationsResponse;
-import pl.edu.pwr.bsiui.json.response.GetMessages;
-import pl.edu.pwr.bsiui.json.response.Response;
-import pl.edu.pwr.bsiui.model.Conversation;
-import pl.edu.pwr.bsiui.model.User;
+import pl.edu.pwr.bsiui.socket.Requests;
+import pl.edu.pwr.bsiui.socket.SocketManager;
+import pl.edu.pwr.bsiui.socket.json.request.*;
+import pl.edu.pwr.bsiui.socket.json.response.ConversationsResponse;
+import pl.edu.pwr.bsiui.socket.json.response.GetMessages;
+import pl.edu.pwr.bsiui.socket.json.response.Response;
+import pl.edu.pwr.bsiui.socket.model.Conversation;
+import pl.edu.pwr.bsiui.socket.model.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,14 +34,12 @@ public class MainFrame extends JFrame implements ActionListener {
     private JList list;
     private JButton newConversationButton;
     private JTextField textField1;
-    private SocketManager socketManager;
-    private String email;
-
-    private Map<String, String> messagesMap = new HashMap<>();
-    private int selectedI = 0;
+    private final transient SocketManager socketManager;
+    private final String email;
+    private final Map<String, String> messagesMap = new HashMap<>();
 
     public MainFrame(String email, String password) throws Exception {
-        super("~DR. Stalowy");
+        super("Secure Chat");
         this.email = email;
         this.socketManager = new SocketManager();
         boolean connected = false;
@@ -76,7 +76,7 @@ public class MainFrame extends JFrame implements ActionListener {
                     var messaageReq = new SendMessageRequest(Requests.SEND_MESSAGE.toString(), new SendMessageRequest.SendMessageRequestBody(
                             list.getSelectedValue().toString(), message
                     ));
-                    var response = socketManager.sendRequest(messaageReq, Response.class);
+                    socketManager.sendRequest(messaageReq, Response.class);
                     loadMessages(list.getSelectedValue().toString());
                 }
             }
@@ -104,7 +104,6 @@ public class MainFrame extends JFrame implements ActionListener {
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.addListSelectionListener(e -> {
             try {
-                selectedI = list.getSelectedIndex();
                 loadMessages((String) list.getSelectedValue());
             } catch (Exception ex) {
                 throw new RuntimeException(ex);

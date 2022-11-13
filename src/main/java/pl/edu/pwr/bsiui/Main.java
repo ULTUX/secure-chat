@@ -1,9 +1,10 @@
 package pl.edu.pwr.bsiui;
 
 import lombok.SneakyThrows;
-import pl.edu.pwr.bsiui.json.request.LoginRequest;
-import pl.edu.pwr.bsiui.json.request.RegisterRequest;
-import pl.edu.pwr.bsiui.json.response.Response;
+import pl.edu.pwr.bsiui.socket.json.request.LoginRequest;
+import pl.edu.pwr.bsiui.socket.json.request.RegisterRequest;
+import pl.edu.pwr.bsiui.socket.json.response.Response;
+import pl.edu.pwr.bsiui.socket.SocketManager;
 
 public class Main {
     @SneakyThrows

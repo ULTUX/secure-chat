@@ -1,4 +1,4 @@
-package pl.edu.pwr.bsiui;
+package pl.edu.pwr.bsiui.socket;
 
 public enum Requests {
     REGISTER("register"),

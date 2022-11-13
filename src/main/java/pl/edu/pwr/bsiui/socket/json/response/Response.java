@@ -1,4 +1,4 @@
-package pl.edu.pwr.bsiui.json.response;
+package pl.edu.pwr.bsiui.socket.json.response;
 
 import lombok.Getter;
 import lombok.Setter;

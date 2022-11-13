@@ -1,9 +1,9 @@
-package pl.edu.pwr.bsiui.json.request;
+package pl.edu.pwr.bsiui.socket.json.request;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import pl.edu.pwr.bsiui.Requests;
+import pl.edu.pwr.bsiui.socket.Requests;
 
 import java.util.List;
 

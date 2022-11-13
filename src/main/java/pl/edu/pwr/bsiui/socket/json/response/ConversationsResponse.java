@@ -1,9 +1,9 @@
-package pl.edu.pwr.bsiui.json.response;
+package pl.edu.pwr.bsiui.socket.json.response;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import pl.edu.pwr.bsiui.model.Conversation;
+import pl.edu.pwr.bsiui.socket.model.Conversation;
 
 import java.util.List;
 

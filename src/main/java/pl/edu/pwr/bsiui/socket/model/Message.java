@@ -1,4 +1,4 @@
-package pl.edu.pwr.bsiui.model;
+package pl.edu.pwr.bsiui.socket.model;
 
 import lombok.Getter;
 import lombok.Setter;
