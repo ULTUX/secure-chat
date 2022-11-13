@@ -16,22 +16,22 @@ public class AES {
         var encryptionCipher = Cipher.getInstance("AES");
         encryptionCipher.init(Cipher.ENCRYPT_MODE, aesKey);
 
-        byte[] encryptedMessageBytes = encryptionCipher.doFinal(data.getBytes());
-        return Base64.getEncoder().encodeToString(encryptedMessageBytes);
+        byte[] decryptedMessage = encryptionCipher.doFinal(data.getBytes());
+        return Base64.getEncoder().encodeToString(decryptedMessage);
     }
 
     public String decryptAES(String encryptedData) throws Exception {
         Cipher decryptionCipher = Cipher.getInstance("AES");
         decryptionCipher.init(Cipher.DECRYPT_MODE, aesKey);
-        byte[] decryptedMessageBytes = decryptionCipher.doFinal(Base64.getDecoder().decode(encryptedData));
-        return new String(decryptedMessageBytes);
+        byte[] decryptedMessage = decryptionCipher.doFinal(Base64.getDecoder().decode(encryptedData));
+        return new String(decryptedMessage);
     }
 
     public static Key generateAesKey() throws Exception {
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(128);
-        Key aesKey = keyGenerator.generateKey();
-        return aesKey;
+        Key key = keyGenerator.generateKey();
+        return key;
 
     }
 }

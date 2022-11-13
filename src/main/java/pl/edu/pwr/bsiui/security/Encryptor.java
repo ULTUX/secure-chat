@@ -16,21 +16,21 @@ public class Encryptor {
     }
 
     public String encrypt(String text) throws Exception {
-        var textBytes = text.getBytes(StandardCharsets.UTF_8);
+        var bytes = text.getBytes(StandardCharsets.UTF_8);
         StringBuilder result = new StringBuilder();
         int i = 0;
         while (text.getBytes().length > 64 * (i + 1)) {
-            var toEncrypt = Arrays.copyOfRange(textBytes, i * 64, (i + 1) * 64);
+            var toEncrypt = Arrays.copyOfRange(bytes, i * 64, (i + 1) * 64);
             result.append(encrypt(toEncrypt));
             i++;
         }
-        result.append(encrypt(Arrays.copyOfRange(textBytes, 64 * (i), textBytes.length)));
+        result.append(encrypt(Arrays.copyOfRange(bytes, 64 * (i), bytes.length)));
         return result.toString();
     }
 
-    private String encrypt(byte[] contentBytes) throws Exception {
+    private String encrypt(byte[] data) throws Exception {
         Cipher cipher = getCipher(Cipher.ENCRYPT_MODE, pubKey);
-        return Base64.getEncoder().encodeToString(cipher.doFinal(contentBytes));
+        return Base64.getEncoder().encodeToString(cipher.doFinal(data));
     }
 
 }

@@ -20,16 +20,16 @@ public class Decryptor {
         StringBuilder result = new StringBuilder();
         int i = 0;
         while (textBytes.length > 172 * i + 1) {
-            var toDecrypt = Arrays.copyOfRange(textBytes, i * 172, (i + 1) * 172);
-            result.append(decrypt(toDecrypt));
+            var data = Arrays.copyOfRange(textBytes, i * 172, (i + 1) * 172);
+            result.append(decrypt(data));
             i++;
         }
         return result.toString();
     }
 
 
-    private String decrypt(byte[] cipherContent) throws Exception {
+    private String decrypt(byte[] data) throws Exception {
         Cipher cipher = getCipher(Cipher.DECRYPT_MODE, privKey);
-        return new String(cipher.doFinal(Base64.getDecoder().decode(cipherContent)));
+        return new String(cipher.doFinal(Base64.getDecoder().decode(data)));
     }
 }
